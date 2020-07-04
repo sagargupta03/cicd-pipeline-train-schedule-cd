@@ -29,8 +29,8 @@ pipeline
 				echo 'Credentials step....'  
 		          	  sshPublisher
 				  (
-                                    failOnError: true,
-                                    continueOnError: false,
+                                    failOnError : true,
+                                    continueOnError : false,
 				  )
 			  }
 		      }
