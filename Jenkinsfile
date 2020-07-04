@@ -19,11 +19,15 @@ pipeline
 		echo 'Testing..'
 		      }
 		}
-		stage('Deploy')
+		stage('DeployToStaging')
 		{
                 		
                 steps {
 		echo 'Deploying....'
+			  withCredentials([usernamePassword(credentialsId: 'webserver_login_SG', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')])
+			  {
+				echo 'Credentials step....'  
+			  }
 		      }
 		}
 	}
