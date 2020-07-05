@@ -1,9 +1,10 @@
 // Declarative -DSL - Domain specific language //
 pipeline
 {
-	agent 
-	{ label 'master'
-	}
+	agent any
+//	agent 
+//	{ label 'master'
+/	}
 	stages
 	{
 		stage('Build') 
