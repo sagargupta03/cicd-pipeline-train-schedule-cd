@@ -24,9 +24,9 @@ pipeline
 		}
 		stage('DeployToStaging')
 		{
-			when {
-                branch 'master'
-                           }
+		//	when {
+                //branch 'master'
+                 //          }
                 		
                 steps {
 		echo 'Deploying....'
@@ -61,9 +61,9 @@ pipeline
 //}
 		stage('DeployToProduction')
 		{
-				when {
-                	branch 'master'
-                        	   }
+			//	when {
+                //	branch 'master'
+                  //      	   }
                 		
                   steps {
 			input 'Does the staging environment look OK?'
