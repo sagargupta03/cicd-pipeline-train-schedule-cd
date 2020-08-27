@@ -77,7 +77,8 @@ pipeline
                                     continueOnError : false,
                                     publishers : [
                                        sshPublisherDesc(
-                                           configName : 'production',
+                                          // configName : 'production'//for time being stagin is only configured, production need to config
+					    configName : 'staging',
                                            sshCredentials : [
                                            username : "$USERNAME",
                                            encryptedPassphrase : "$USERPASS"
