@@ -54,22 +54,21 @@ pipeline
                                                         )
                                                    ]
                                                  )
-				  
-			  }
+				}
 		      }
 		}
 	}
 }
-stage('DeployToProduction')
+		stage('DeployToProduction')
 		{
-			when {
-                branch 'master'
-                           }
+				when {
+                	branch 'master'
+                        	   }
                 		
-                steps {
+                  steps {
 			input 'Does the staging environment look OK?'
 			milestone(1)
-		echo 'Deploying to Prod....'
+		        echo 'Deploying to Prod....'
 			  withCredentials([usernamePassword(credentialsId: 'webserver_login_SG', usernameVariable: 'USERNAME', passwordVariable: 'USERPASS')])
 			  {
 				echo 'Credentials step....'  
@@ -99,4 +98,4 @@ stage('DeployToProduction')
 		      }
 		}
 	}
-}
+//}
