@@ -24,6 +24,9 @@ pipeline
 		}
 		stage('DeployToStaging')
 		{
+			when {
+                branch 'master'
+                           }
                 		
                 steps {
 		echo 'Deploying....'
